@@ -1,3 +1,5 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+	
 *{
     box-sizing: border-box;
 }
@@ -5,7 +7,7 @@
 body{
 	padding:20px 120px 20px 120px;
 	font-family: 'segoe ui';
-	background: url(images/project/gif.gif);
+	background: url(gif.gif);
 background-color: #000;
 	background-size:100% 100vh;
 	background-repeat:repeat-x;
@@ -26,13 +28,7 @@ a{
 	margin-top:5px;
 	margin-bottom:30px;
 	border-radius:10px;
-	background-color: rgba(102, 102, 102, 0.488);
-	--card-background-color: rgba(255, 255, 255, .015);
-	--card-border-color: rgba(255, 255, 255, 0.1);
-	--card-box-shadow-1: rgba(0, 0, 0, 0.05);
-	--card-box-shadow-1-y: 3px;
-	--card-box-shadow-1-blur: 6px;
-	--card-box-shadow-2: rgba(0, 0, 0, 0.1);
+	background:linear-gradient(100deg,rgb(59, 59, 59) 10%, rgb(0, 0, 0));
 }
   
 .nav .nav-header{
@@ -127,7 +123,7 @@ a{
 .nav{
 		height: 50px;
 		width:100%;
-		background-color: rgba(44, 42, 42, 0.445);
+		background:linear-gradient(100deg,rgb(59, 59, 59) 10%, rgb(0, 0, 0));
 		position: relative;
 		border-radius:10px;
 	}
@@ -191,7 +187,7 @@ a{
 	height: 0px;
 }
 .nav #nav-check:checked ~ .nav-links{
-	height: calc(60vh - 50px);
+	height: calc(50vh - 50px);
 	overflow-y: auto;
 }
 }
@@ -499,6 +495,15 @@ a{
 	border-radius: 10px;
 	background-color: aqua;
     background-color: rgba(0, 0, 0, .25);
+	border-top:5px solid black;
+    border-bottom:5px solid rgb(217, 0, 141);
+    background-image: 
+        linear-gradient(black, rgb(217, 0, 141)),
+        linear-gradient(black, rgb(217, 0, 141));
+    background-size:10px 100%;
+    background-position:0 0, 100% 0;
+	border-radius:-4px;
+	background-repeat: no-repeat;
 	}
 	
 	.skills-header{
@@ -614,14 +619,14 @@ a{
 	border-radius: 10px;
 	padding:32px 0;
 	margin-top: 2rem;
-	border-top:5px solid black;
-    border-bottom:5px solid rgb(217, 0, 141);
+	border-top:5px solid rgb(217, 0, 141);
+    border-bottom:5px solid black;
     background-image: 
-        linear-gradient(black, rgb(217, 0, 141)),
-        linear-gradient(black, rgb(217, 0, 141));
+        linear-gradient(rgb(217, 0, 141), black),
+        linear-gradient(rgb(217, 0, 141), black);
     background-size:10px 100%;
     background-position:0 0, 100% 0;
-	border-radius:-4px;
+	border-radius: 10px;
 	background-repeat: no-repeat;
   }
   
@@ -929,4 +934,68 @@ margin: 0px;
 		  padding: 0;
 		}
 	  }
+
+
+
+	
+	  .social-container {
+		  margin:auto;
+		  text-align:left;
+	  }
 	  
+	  .social-icons {
+		  padding: 0;
+		  list-style: none;
+
+		
+		  li {
+			  display: inline-block;
+			  margin: 0.1em;
+			  position: relative;
+			  font-size: 1.2em;
+	  
+		  }
+	  
+		  i {
+			  color: #ffffff;
+			  position: absolute;
+			  top: 21px;
+			  left: 21px;
+			  background:linear-gradient(100deg, rgb(0, 0, 0) 10%,rgb(64, 64, 64)); background-color: #b9134f;
+			  padding:10px;
+			  border-radius:100%;
+			  box-shadow: rgba(143, 142, 142, 0.192) 0px 10px 20px;
+		  }
+		 
+	  
+		 
+		  a {
+			display: inline-block;
+		  
+			&:before {
+				content: " ";
+				width: 60px;
+				height: 60px;
+				border-radius: 100%;
+				display: block;
+				
+				
+			}
+			
+			&:hover:before {
+				transform: scale(0);
+				
+			}
+			
+			
+			&:hover i {
+				width:80px;
+				height:80px;
+				background:  #b9134f;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				box-shadow: 0px 0px 0px white;
+			}
+
+		}
+	}
